@@ -11,6 +11,8 @@ directory, to keep it separate from the other tasks.
 
   Do the same for set comprehensions and dictionary comprehensions.
 
+  ## it is creating a new list from an existing list by extracting items from it in one concise line
+
 * Given a list `x`, what is the difference between these two lines of code?
 
   ```python
