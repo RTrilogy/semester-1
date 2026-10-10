@@ -1,21 +1,23 @@
 # Worksheet 1.2: Task 2 Solution
-from statistics import mean, median
+from util import read_numbers
 import sys
 
 try:
-    numlist = input("Enter a sequence of float values: ")
+    floatlist = read_numbers()
 except:
     sys.exit("Error: no numbers provided")
 
-list1 = numlist.split(",")
-floatlist = []
-for i in list1:
-    floatlist.append(float(list1[i]))
-
 min_val = min(floatlist)
 max_val = max(floatlist)
-median_val = median(floatlist)
-mean_val = mean(floatlist)
+
+sortlist = floatlist.sort()
+median_val = floatlist[len(floatlist) // 2]
+
+num1 = 0.0
+for i in range(len(floatlist)):
+    num1 = num1 + floatlist[i]
+num1 = num1 / len(floatlist)
+mean_val = num1
 
 print(f"Minimum = {min_val}")
 print(f"Maximum = {max_val}")
