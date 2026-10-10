@@ -7,6 +7,10 @@ except:
     print("Error: Grade must be an integer between 0 and 100")
     sys.exit("Error: Grade must be an integer between 0 and 100")
 
+if num1 < 0 or num1 > 100:
+    print("Error: Grade must be an integer between 0 and 100")
+    sys.exit("Error: Grade must be an integer between 0 and 100")
+
 if num1 >= 0 and num1 <= 39:
     print(f"{num1} is a Fail")
 elif num1 >= 40 and num1 <= 69:
