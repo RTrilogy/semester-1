@@ -2,16 +2,26 @@
 from util import read_numbers
 import sys
 
-try:
-    floatlist = read_numbers()
-except:
+
+floatlist = read_numbers()
+if floatlist == []:
+    print("Error: no numbers provided")
     sys.exit("Error: no numbers provided")
+
 
 min_val = min(floatlist)
 max_val = max(floatlist)
 
-sortlist = floatlist.sort()
-median_val = floatlist[len(floatlist) // 2]
+sortlist = sorted(floatlist)
+odd = False
+if (len(floatlist) % 2) == 0:
+    odd = False
+else:
+    odd = True
+if odd:
+    median_val = sortlist[len(floatlist) // 2]
+else:
+    median_val = ( ( sortlist[len(floatlist) // 2] - sortlist[(len(floatlist) // 2) - 1] ) / 2 ) + sortlist[(len(floatlist) // 2) - 1]
 
 num1 = 0.0
 for i in range(len(floatlist)):

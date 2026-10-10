@@ -4,6 +4,7 @@ import sys
 try:
     num1 = int(input("Enter your grade as an integer between 0 and 100: "))
 except:
+    print("Error: Grade must be an integer between 0 and 100")
     sys.exit("Error: Grade must be an integer between 0 and 100")
 
 if num1 >= 0 and num1 <= 39:
