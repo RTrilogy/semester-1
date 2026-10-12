@@ -5,6 +5,7 @@ fruit = ['apple','pear','banana','orange']
 # loop through the list
 while fruit:
 	print(fruit.pop())
+print(fruit)
 
 
 # Why does this work?
