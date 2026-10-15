@@ -6,6 +6,7 @@
 
 
 # open and read the file
+t = open("site.txt", "r")
 
 # find all failed login attempts (POST /login with the response 401)
 # and print these out in a human-readable format:

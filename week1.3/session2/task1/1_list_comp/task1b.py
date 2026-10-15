@@ -12,6 +12,8 @@ for i in values:
         newval.append(i)
 
 print(newval)
+newval2 = [item * 2 for item in values if item % 2 == 0]
+print(newval2)
 
 # write the list comprehension equivalent to the `for` loop
 
