@@ -11,6 +11,13 @@
 # function implementation
 
 def mystery_func(string):
+    """
+    Function increments the variables lower and upper
+    by 1 each time a character is detected in a passed string which is either lowercase or uppercase, then returns the lower and upper variables.
+
+    args: string, ch
+    returns: lower, upper
+    """
     upper = 0
     lower = 0
 

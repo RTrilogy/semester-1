@@ -1,10 +1,13 @@
 
 # function implementation
 
-def rectangle_area( ):  # define suitable input data
+num = int(input("enter width: "))
+num1 = int(input("enter length: "))
+def rectangle_area(num, num1):  # define suitable input data
     # ...               # implement the function
-    return              # return an appropriate value
+    area = num * num1
+    return area            # return an appropriate value
 
 # testing the function
 
-print(f"Area is {rectangle_area( )}")   # provide suitable data matching your inputs
+print(f"Area is {rectangle_area(num, num1)}")   # provide suitable data matching your inputs

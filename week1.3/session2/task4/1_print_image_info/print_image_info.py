@@ -4,6 +4,11 @@
 # You can use the relative path ../images/filename
 # You could handle file errors with try/except.
 
+w = open("feep.pgm", "r")
+data = w.readlines()
+data = [line.strip().split() for line in data[1:]]
+print(data)
+w.close()
 # Read the file content
 
 # print image dimension (i.e., Dimensions: width x height pixels)
