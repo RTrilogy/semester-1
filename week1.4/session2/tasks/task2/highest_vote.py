@@ -17,10 +17,21 @@ def most_frequent_string(votes):
         - None, None: if votes is empty.
     """
 
+
     # Your task is to complete the body of the function based on the details in the docstring.
     # Hint 1: You can complete this task with for loops or comprehensions 
     # Hint 2: Think about the properties of the various collection-types
+    temp = {}
+    for word in votes:
+        if word in temp:
+            temp[word] += 1
+        elif word not in temp:
+            temp[word] = 1
 
+    temp2 = sorted(temp.items(), key=lambda kv: kv[1])
+    if temp2 == []:
+        return [None, None]
+    return temp2[-1]
 
 fruit = ['date', 'apple', 'cherry', 'date', 'apple', 'apple', 'elderberry',
          'date', 'elderberry', 'elderberry', 'date', 'banana']
