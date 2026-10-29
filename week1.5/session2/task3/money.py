@@ -26,6 +26,10 @@ class Money:
         # Add code here to return an appropriate string representation
         # Use the currency symbol for British Pounds Sterling
         # Represent pence with a leading zero if needed (e.g. '05')
+        if self.pence < 10:
+            return f"(£{self.pounds}.0{self.pence})"
+        else:
+            return f"(£{self.pounds}.{self.pence})"
 
     def __add__(self, other):
         """
@@ -34,3 +38,16 @@ class Money:
         # Add code here to check that parameter 'other' is a Money object,
         # add self to other, then return the sum as a new Money object
         # (see README for hints and tips)
+        if not isinstance(other, Money):
+            return None
+        addval = self.pounds + other.pounds
+        pval = self.pence + other.pence
+        if pval >= 100:
+            addval += 1
+            pval = pval - 100
+
+        if pval < 10:
+            return f"(£{addval}.0{pval})"
+        else:
+            return f"(£{addval}.{pval})"
+

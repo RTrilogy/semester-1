@@ -29,7 +29,7 @@ class Point:
         """
         Returns distance of this Point from another Point.
         """
-        return math.hypot(self.x - p.x, self.y - p.y)
+        return math.hypot(self.x - p[0], self.y - p[1])
 
     def __str__(self):
         """
@@ -73,3 +73,9 @@ class Circle:
         return f"radius={self.radius}, centre={self.centre}"
 
     # Implement your __contains__() method here
+
+    def __contains__(self, item):
+        if item.distance_to(self.centre) < self.radius:
+            return "Point is in circle"
+        else:
+            return "Point is not in circle"
