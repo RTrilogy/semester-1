@@ -34,6 +34,10 @@ class QuakeDataset:
         The new data replaces any existing data.
         """
         # Write code here to replace existing data with new earthquake data.
+        temp = self.feed.reader()
+        for line in temp:
+            print(temp[line])
+
         # Use the value returned by the feed's reader() method as the
         # subject of a for loop.
 
