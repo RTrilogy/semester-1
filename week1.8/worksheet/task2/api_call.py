@@ -1,9 +1,9 @@
 
-import httpx
+import httpx, random
 
 base_url = "https://dummyjson.com/"
 
-content = "posts/1"
+content = "products/search?q=apple"
 
 url = base_url + content  # API request
 
@@ -14,3 +14,4 @@ print(response.status_code)   # HTTP response
 content = response.json()   # JSON data
 
 print(content)
+print(random.choice([k for k in range(3,21,2)]))
